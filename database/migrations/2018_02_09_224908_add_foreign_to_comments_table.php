@@ -15,10 +15,10 @@ class AddForeignToCommentsTable extends Migration
     {
         Schema::table('comments', function (Blueprint $table) {
             //
-            $table->integer('post_id')->unsigned();
-            $table->foreign('post_id')->references('id')->on('posts');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('posts_id')->unsigned();
+            $table->foreign('posts_id')->references('id')->on('posts');
+            $table->integer('users_id')->unsigned();
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 

@@ -15,8 +15,8 @@ class AddForeignToSectionsTable extends Migration
     {
         Schema::table('sections', function (Blueprint $table) {
             //
-            $table->integer('post_id')->unsigned();
-            $table->foreign('post_id')->references('id')->on('posts');
+            $table->integer('posts_id')->unsigned();
+            $table->foreign('posts_id')->references('id')->on('posts');
         });
     }
 
